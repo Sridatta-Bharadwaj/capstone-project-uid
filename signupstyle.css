@@ -1,0 +1,86 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212; /* Dark Navy */
+}
+
+/* Signup Container */
+.signup-container {
+    background: #1E3A8A; /* Cool Blue */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    text-align: center;
+}
+
+/* Headings */
+h2 {
+    color: #FFFFFF; /* White */
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    color: #FFFFFF; /* White */
+    text-align: left;
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background: #F3F4F6; /* Light Gray */
+    color: #000000;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: 2px solid #60A5FA; /* Light Blue */
+}
+
+/* Register Button */
+.register-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #10B981; /* Vibrant Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.register-btn:hover {
+    background-color: #059669; /* Darker Green */
+}
+
+/* Login Link */
+.login-link {
+    margin-top: 12px;
+    color: #60A5FA; /* Light Blue */
+}
+
+.login-link a {
+    color: #60A5FA;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.login-link a:hover {
+    color: #3B82F6; /* Brighter Blue */
+    text-decoration: underline;
+}
