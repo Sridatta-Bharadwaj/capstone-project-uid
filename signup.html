@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
-    <link rel="stylesheet" href="signupstyle.css" />
+    <link rel="stylesheet" href="signupstyle.css">
 </head>
 
 <body>
@@ -23,16 +22,22 @@
 
             <label for="pass">Password</label>
             <input type="password" id="pass" placeholder="Password" required>
-
+            
+            <!-- Password Rules Display -->
+            <ul id="password-rules">
+                <li id="length-rule" class="invalid">At least 8 characters</li>
+                <li id="uppercase-rule" class="invalid">At least 1 uppercase letter</li>
+                <li id="number-rule" class="invalid">At least 1 number</li>
+                <li id="special-rule" class="invalid">At least 1 special character (@$!%*?&)</li>
+            </ul>
+            
             <button type="submit" class="register-btn">Sign Up</button>
         </form>
         <p class="login-link">Already have an account? <a href="login.html">Login</a></p>
     </div>
 
-    <!-- Firebase and Signup Logic -->
+    <!-- Firebase & Signup Logic -->
     <script type="module" src="firebase-config.js"></script>
     <script type="module" src="signup.js"></script>
-
 </body>
-
 </html>
