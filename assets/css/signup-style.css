@@ -5,12 +5,14 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #121212; /* Dark Navy */
+    background-color: #121212;
+    /* Dark Navy */
 }
 
 /* Signup Container */
 .signup-container {
-    background: #1E3A8A; /* Cool Blue */
+    background: #1E3A8A;
+    /* Cool Blue */
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -20,7 +22,8 @@ body {
 
 /* Headings */
 h2 {
-    color: #FFFFFF; /* White */
+    color: #FFFFFF;
+    /* White */
 }
 
 /* Labels */
@@ -28,31 +31,37 @@ label {
     font-weight: bold;
     display: block;
     margin-top: 10px;
-    color: #FFFFFF; /* White */
+    color: #FFFFFF;
+    /* White */
     text-align: left;
 }
 
 /* Input Fields */
-input, select {
+input,
+select {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
     border: none;
     border-radius: 5px;
-    background: #F3F4F6; /* Light Gray */
+    background: #F3F4F6;
+    /* Light Gray */
     color: #000000;
     font-size: 14px;
 }
 
 /* Dropdown (Role Selection) */
 select {
-    appearance: none; /* Remove default styles */
+    appearance: none;
+    /* Remove default styles */
     cursor: pointer;
-    background-color: #F3F4F6; /* Light Gray */
+    background-color: #F3F4F6;
+    /* Light Gray */
 }
 
 select:focus {
-    outline: 2px solid #60A5FA; /* Light Blue */
+    outline: 2px solid #60A5FA;
+    /* Light Blue */
 }
 
 /* Register Button */
@@ -60,7 +69,8 @@ select:focus {
     width: 100%;
     padding: 12px;
     margin-top: 20px;
-    background-color: #10B981; /* Vibrant Green */
+    background-color: #10B981;
+    /* Vibrant Green */
     color: white;
     border: none;
     border-radius: 5px;
@@ -71,13 +81,15 @@ select:focus {
 }
 
 .register-btn:hover {
-    background-color: #059669; /* Darker Green */
+    background-color: #059669;
+    /* Darker Green */
 }
 
 /* Login Link */
 .login-link {
     margin-top: 12px;
-    color: #60A5FA; /* Light Blue */
+    color: #60A5FA;
+    /* Light Blue */
 }
 
 .login-link a {
@@ -88,7 +100,8 @@ select:focus {
 }
 
 .login-link a:hover {
-    color: #3B82F6; /* Brighter Blue */
+    color: #3B82F6;
+    /* Brighter Blue */
     text-decoration: underline;
 }
 
@@ -107,7 +120,8 @@ select:focus {
 }
 
 #password-rules li::before {
-    content: "✖"; /* Default cross mark */
+    content: "✖";
+    /* Default cross mark */
     color: red;
     position: absolute;
     left: 0;
@@ -118,7 +132,8 @@ select:focus {
 }
 
 #password-rules .valid::before {
-    content: "✔"; /* Check mark for valid criteria */
+    content: "✔";
+    /* Check mark for valid criteria */
     color: green;
 }
 
