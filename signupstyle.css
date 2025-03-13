@@ -33,7 +33,7 @@ label {
 }
 
 /* Input Fields */
-input {
+input, select {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -44,7 +44,14 @@ input {
     font-size: 14px;
 }
 
-input:focus {
+/* Dropdown (Role Selection) */
+select {
+    appearance: none; /* Remove default styles */
+    cursor: pointer;
+    background-color: #F3F4F6; /* Light Gray */
+}
+
+select:focus {
     outline: 2px solid #60A5FA; /* Light Blue */
 }
 
@@ -118,5 +125,3 @@ input:focus {
 #password-rules .invalid {
     color: red;
 }
-
-

@@ -33,7 +33,7 @@
             signInWithEmailAndPassword(auth, email, password)
                 .then(() => {
                     alert("Login successful!");
-                    window.location.href = "#"; // Redirect to a dashboard page
+                    window.location.href = "home.html"; // Redirect to a dashboard page
                 })
                 .catch((error) => {
                     alert(error.message);
