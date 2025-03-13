@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const username = document.getElementById("username").value.trim();
         const email = document.getElementById("email").value.trim();
         const password = passwordInput.value.trim();
+        const role = document.getElementById("role").value; // Get selected role
 
         // Final password validation
         if (document.querySelectorAll(".valid").length !== 4) {
@@ -57,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 name: name,
                 username: username,
                 email: email,
+                role: role, // Store the selected role
                 createdAt: new Date(),
             });
 

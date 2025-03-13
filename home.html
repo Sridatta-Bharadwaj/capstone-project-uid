@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amrita Blog</title>
+    <style>
+    /* General Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: #f4f4f4;
+        color: #333;
+    }
+
+    /* Navbar */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        background: #0047ab;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 5px 10px;
+        transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        color: #00C6FF;
+        text-shadow: 0 0 15px #00C6FF, 0 0 25px #00C6FF, 0 0 40px #00C6FF;
+        background: rgba(0, 198, 255, 0.2);
+        border-radius: 5px;
+        box-shadow: 0 0 20px rgba(0, 198, 255, 0.5);
+    }
+
+    /* Hero Section */
+    .hero {
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        position: relative;
+        background: url('https://cache.careers360.mobi/media/article_images/2023/3/7/amrita-vishwa-vidyapeetham-feature-image.jpg') no-repeat center center/cover;
+    }
+
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+        font-weight: bold;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        background: linear-gradient(90deg, #007BFF, #00C6FF);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    /* Latest from Amrita */
+    .latest-title {
+        font-size: 42px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 50px;
+        color: #ffffff;
+        text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+        background: linear-gradient(90deg, #007BFF, #00C6FF);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding: 15px;
+    }
+
+    /* Blog Section */
+    .blog-container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 50px;
+    }
+
+    .blog-card {
+        width: 300px;
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+    }
+
+    .blog-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .blog-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .blog-content {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .category {
+        display: inline-block;
+        background: #007BFF;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .blog-content h3 {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    .blog-content p {
+        font-size: 16px;
+        color: #555;
+    }
+
+    .read-more {
+        display: inline-block;
+        margin-top: 10px;
+        text-decoration: none;
+        color: #007BFF;
+        font-weight: bold;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    /* Footer with QR Code */
+    .footer {
+        background: #0047ab;
+        color: white;
+        text-align: center;
+        padding: 30px 20px;
+        position: relative;
+    }
+
+    .qr-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .qr-container img {
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+        transition: transform 0.3s;
+    }
+
+    .qr-container img:hover {
+        transform: scale(1.1);
+    }
+</style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="Amrita Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="blogs.html">Blog</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Research</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Background Image -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Amrita Weblog</h1>
+            <p>Your source for the latest insights and stories</p>
+        </div>
+    </section>
+
+    <!-- Latest from Amrita -->
+    <h2 class="latest-title">Latest from Amrita</h2>
+
+    <!-- Blog Section -->
+    <section class="blog-container">
+        <div class="blog-card">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.PJBJPKGY-8bRfgIWHuqdIAHaER&pid=Api&P=0&h=180" alt="Blog Image">
+            <div class="blog-content">
+                <span class="category">Health Blog</span>
+                <h3>Healthy Living Tips</h3>
+                <p>Discover the best tips for maintaining a healthy lifestyle.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+        
+        <div class="blog-card">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.89uvk8TA6-reQ7koKTfAwwHaEX&pid=Api&P=0&h=180" alt="Blog Image">
+            <div class="blog-content">
+                <span class="category">Technology</span>
+                <h3>AI in Education</h3>
+                <p>How artificial intelligence is transforming learning.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.qcGu4nx1n-BgdM_tQV8w2wHaE8&pid=Api&P=0&h=180" alt="Blog Image">
+            <div class="blog-content">
+                <span class="category">Food Blog</span>
+                <h3>Delicious Recipes</h3>
+                <p>Try out these amazing recipes from around the world.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+    </section>
+<!-- Latest from Amrita -->
+    <h2 class="latest-title">Top Blog Posts</h2>
+
+<section class="blog-container">
+        <div class="blog-card">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.PJBJPKGY-8bRfgIWHuqdIAHaER&pid=Api&P=0&h=180" alt="Blog Image">
+            <div class="blog-content">
+                <span class="category">Health Blog</span>
+                <h3>Healthy Living Tips</h3>
+                <p>Discover the best tips for maintaining a healthy lifestyle.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+        
+        <div class="blog-card">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.89uvk8TA6-reQ7koKTfAwwHaEX&pid=Api&P=0&h=180" alt="Blog Image">
+            <div class="blog-content">
+                <span class="category">Technology</span>
+                <h3>AI in Education</h3>
+                <p>How artificial intelligence is transforming learning.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.qcGu4nx1n-BgdM_tQV8w2wHaE8&pid=Api&P=0&h=180" alt="Blog Image">
+            <div class="blog-content">
+                <span class="category">Food Blog</span>
+                <h3>Delicious Recipes</h3>
+                <p>Try out these amazing recipes from around the world.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+    </section>
+
+ <!-- Blog Content Here -->
+    
+   <!-- Footer with QR Code, LinkedIn, and Contact Info -->
+<footer class="footer">
+    <h1>For more details on our blogs</h1>
+    <div class="footer-content">
+        <!-- LinkedIn Section -->
+        <div class="linkedin-container">
+            <img src="C:\Users\vasan\Downloads\Untitled (1).png" alt="LinkedIn Logo"><br>
+            <br><p>Follow us on LinkedIn</p>
+        </div>
+
+        <!-- QR Code Section -->
+        <div class="qr-container">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.instagram.com/amrita_university/" alt="Instagram QR Code"><br>
+            <p>Scan the QR code to visit our Instagram page</p>
+        </div>
+
+        <!-- Contact Info Section -->
+        <div class="contact-container">
+            <h3>Contact Us</h3><br>
+            <p>📍 Amrita Vishwa Vidyapeetham</p>
+            <p>📞 +91 422 268 5000</p>
+            <p>📧 contact@amrita.edu</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+/* Footer Styling */
+.footer {
+    background: #0047ab;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+/* LinkedIn Container */
+.linkedin-container img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s;
+}
+
+.linkedin-container img:hover {
+    transform: scale(1.1);
+}
+
+/* QR Code Container */
+.qr-container img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s;
+}
+
+.qr-container img:hover {
+    transform: scale(1.1);
+}
+
+/* Contact Container */
+.contact-container h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.contact-container p {
+    font-size: 14px;
+}
+</style>
+</body>
+</html>
