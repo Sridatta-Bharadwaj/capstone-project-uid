@@ -200,6 +200,7 @@ nav ul li a:hover {
 .qr-container img:hover {
     transform: scale(1.1);
 }
+
 /* Footer Styling */
 .footer {
     background: #0047ab;
