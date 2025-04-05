@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Amrita</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+       
+        /* Navbar */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: #0047ab;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #00C6FF;
+            text-shadow: 0 0 15px #00C6FF, 0 0 25px #00C6FF, 0 0 40px #00C6FF;
+            background: rgba(0, 198, 255, 0.2);
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0, 198, 255, 0.5);
+        }
+
+
+        .hero h1 {
+            font-size: 50px;
+            font-weight: 600;
+        }
+        .hero p {
+            font-size: 20px;
+        }
+        .content-section {
+            padding: 80px 15%;
+            text-align: center;
+        }
+        .content-section h2 {
+            font-size: 36px;
+            color: BLUE;
+        }
+        .content-section p, .content-section ul {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .content-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .content-section ul li {
+            padding: 10px;
+            background: #f4f4f4;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+        /* Footer with QR Code */
+        .footer {
+            background: #0047ab;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            position: relative;
+        }
+
+        .qr-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        .qr-container img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .qr-container img:hover {
+            transform: scale(1.1);
+        }
+/* Footer Styling */
+        .footer {
+            background: #0047ab;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* LinkedIn Container */
+        .linkedin-container img {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .linkedin-container img:hover {
+            transform: scale(1.1);
+        }
+
+        /* QR Code Container */
+        .qr-container img {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .qr-container img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Contact Container */
+        .contact-container h2 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .contact-container p {
+            font-size: 14px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <img src="97c712d8-21e5-48c1-b1f6-40cf1d197a5c.jpg" alt="Amrita Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="homeblog2.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="blogs">Blog</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Research</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    
+    <section id="mission" class="content-section">
+        <h2>Our Mission</h2>
+        <p>We aim to provide world-class education, research, and community service with a strong emphasis on innovation and leadership.</p>
+    </section>
+    
+    <section id="vision" class="content-section">
+        <h2>Our Vision</h2>
+        <p>To be recognized globally for academic excellence and research-driven contributions to society.</p>
+    </section>
+    
+    <section id="values" class="content-section">
+        <h2>Our Core Values</h2>
+        <ul>
+            <li>Innovation & Excellence</li>
+            <li>Integrity & Ethics</li>
+            <li>Collaboration & Inclusion</li>
+            <li>Sustainability & Social Responsibility</li>
+        </ul>
+    </section>
+    
+    <section id="contact" class="content-section">
+        <h2>Contact Us</h2>
+        <p>Email: contact@amrita.edu | Phone: +91 12345 67890</p>
+    </section>
+    
+     <!-- Footer with QR Code, LinkedIn, and Contact Info -->
+    <footer class="footer">
+        <h1>For more details on our blogs</h1>
+        <div class="footer-content">
+            <!-- LinkedIn Section -->
+            <div class="linkedin-container">
+                <a href="https://in.linkedin.com/in/amrita-vishwa-vidyapeetham-chennai-campus-885674259"><img src="https://tse3.mm.bing.net/th?id=OIP.ozDiSGJlUqI6815cRlJiNAHaHa&pid=Api&P=0&h=180" alt="LinkedIn Logo"></a><br>
+                <br><p>Follow us on LinkedIn</p>
+            </div>
+
+            <!-- QR Code Section -->
+            <div class="qr-container">
+                <a href="https://www.instagram.com/amrita_university/"><img src="https://i.pinimg.com/originals/6a/39/8e/6a398e2bffd61024b7fa8c6eaf6a4e62.png" alt="Instagram QR Code"></a><br>
+                <p>Follow us on Instagram</p>
+            </div>
+
+            <!-- Contact Info Section -->
+            <div class="contact-container">
+                <h3>Contact Us</h3><br><br>
+                <p>📍 Amrita Vishwa Vidyapeetham</p>
+                <p>📞 +91 422 268 5000</p>
+                <p>📧 contact@amrita.edu</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
