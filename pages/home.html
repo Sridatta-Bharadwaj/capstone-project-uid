@@ -1,144 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amrita Blog</title>
-    <link rel="stylesheet" href="../assets/css/home-style.css">
-
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amrita Blog</title>
+  <link rel="stylesheet" href="../assets/css/home-style.css" />
 </head>
-
 <body>
+  <!-- Navigation Bar -->
+  <header>
+    <div class="logo">
+      <img src="../assets/images/logo.jpg" alt="Amrita Logo" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blogs.html">Blog</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="research.html">Research</a></li>
+      </ul>
+    </nav>
+    <div class="profile-icon">
+      <img id="profilePic" src="../assets/images/default-avatar.png" alt="Profile" />
+    </div>
+  </header>
 
-    <!-- Navigation Bar -->
-    <header>
-        <div class="logo">
-            <img src="../assets/images/logo.jpg" alt="Amrita Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="../pages/home.html">Home</a></li>
-                <li><a href="../pages/about.html">About</a></li>
-                <li><a href="../pages/blogs.html">Blog</a></li>
-                <li><a href="../pages/events.html">Events</a></li>
-                <li><a href="../pages/research.html">Research</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Amrita Weblog</h1>
+      <p>Your source for the latest insights and stories</p>
+    </div>
+  </section>
 
-    <!-- Hero Section with Background Image -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Welcome to Amrita Weblog</h1>
-            <p>Your source for the latest insights and stories</p>
-        </div>
-    </section>
+  <!-- Latest Blogs -->
+  <h2 class="latest-title">Latest from Amrita</h2>
+  <section class="blog-container" id="latestBlogsContainer"></section>
 
-    <!-- Latest from Amrita -->
-    <h2 class="latest-title">Latest from Amrita</h2>
+  <!-- Top Blog Posts -->
+  <h2 class="latest-title">Top Blog Posts</h2>
+  <section class="blog-container" id="popularBlogsContainer"></section>
 
-    <!-- Blog Section -->
-    <section class="blog-container">
-        <div class="blog-card">
-            <img src="https://tse4.mm.bing.net/th?id=OIP.PJBJPKGY-8bRfgIWHuqdIAHaER&pid=Api&P=0&h=180" alt="Blog Image">
-            <div class="blog-content">
-                <span class="category">Health Blog</span>
-                <h3>Healthy Living Tips</h3>
-                <p>Discover the best tips for maintaining a healthy lifestyle.</p>
-                <a href="#" class="read-more">Read More</a>
-            </div>
-        </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <h1>For more details on our blogs</h1>
+    <div class="footer-content">
+      <div class="linkedin-container">
+        <img src="../assets/images/linkedin-logo.png" alt="LinkedIn Logo" /><br />
+        <p>Follow us on LinkedIn</p>
+      </div>
+      <div class="qr-container">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.instagram.com/amrita_university/" alt="Instagram QR Code" /><br />
+        <p>Scan the QR code to visit our Instagram page</p>
+      </div>
+      <div class="contact-container">
+        <h3>Contact Us</h3>
+        <p>📍 Amrita Vishwa Vidyapeetham</p>
+        <p>📞 +91 422 268 5000</p>
+        <p>📧 contact@amrita.edu</p>
+      </div>
+    </div>
+  </footer>
 
-        <div class="blog-card">
-            <img src="https://tse1.mm.bing.net/th?id=OIP.89uvk8TA6-reQ7koKTfAwwHaEX&pid=Api&P=0&h=180" alt="Blog Image">
-            <div class="blog-content">
-                <span class="category">Technology</span>
-                <h3>AI in Education</h3>
-                <p>How artificial intelligence is transforming learning.</p>
-                <a href="#" class="read-more">Read More</a>
-            </div>
-        </div>
-
-        <div class="blog-card">
-            <img src="https://tse1.mm.bing.net/th?id=OIP.qcGu4nx1n-BgdM_tQV8w2wHaE8&pid=Api&P=0&h=180" alt="Blog Image">
-            <div class="blog-content">
-                <span class="category">Food Blog</span>
-                <h3>Delicious Recipes</h3>
-                <p>Try out these amazing recipes from around the world.</p>
-                <a href="#" class="read-more">Read More</a>
-            </div>
-        </div>
-    </section>
-    <!-- Latest from Amrita -->
-    <h2 class="latest-title">Top Blog Posts</h2>
-
-    <section class="blog-container">
-        <div class="blog-card">
-            <img src="https://tse4.mm.bing.net/th?id=OIP.PJBJPKGY-8bRfgIWHuqdIAHaER&pid=Api&P=0&h=180" alt="Blog Image">
-            <div class="blog-content">
-                <span class="category">Health Blog</span>
-                <h3>Healthy Living Tips</h3>
-                <p>Discover the best tips for maintaining a healthy lifestyle.</p>
-                <a href="#" class="read-more">Read More</a>
-            </div>
-        </div>
-
-        <div class="blog-card">
-            <img src="https://tse1.mm.bing.net/th?id=OIP.89uvk8TA6-reQ7koKTfAwwHaEX&pid=Api&P=0&h=180" alt="Blog Image">
-            <div class="blog-content">
-                <span class="category">Technology</span>
-                <h3>AI in Education</h3>
-                <p>How artificial intelligence is transforming learning.</p>
-                <a href="#" class="read-more">Read More</a>
-            </div>
-        </div>
-
-        <div class="blog-card">
-            <img src="https://tse1.mm.bing.net/th?id=OIP.qcGu4nx1n-BgdM_tQV8w2wHaE8&pid=Api&P=0&h=180" alt="Blog Image">
-            <div class="blog-content">
-                <span class="category">Food Blog</span>
-                <h3>Delicious Recipes</h3>
-                <p>Try out these amazing recipes from around the world.</p>
-                <a href="#" class="read-more">Read More</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Content Here -->
-
-    <!-- Footer with QR Code, LinkedIn, and Contact Info -->
-    <footer class="footer">
-        <h1>For more details on our blogs</h1>
-        <div class="footer-content">
-            <!-- LinkedIn Section -->
-            <div class="linkedin-container">
-                <img src="C:\Users\vasan\Downloads\Untitled (1).png" alt="LinkedIn Logo"><br>
-                <br>
-                <p>Follow us on LinkedIn</p>
-            </div>
-
-            <!-- QR Code Section -->
-            <div class="qr-container">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.instagram.com/amrita_university/"
-                    alt="Instagram QR Code"><br>
-                <p>Scan the QR code to visit our Instagram page</p>
-            </div>
-
-            <!-- Contact Info Section -->
-            <div class="contact-container">
-                <h3>Contact Us</h3><br>
-                <p>📍 Amrita Vishwa Vidyapeetham</p>
-                <p>📞 +91 422 268 5000</p>
-                <p>📧 contact@amrita.edu</p>
-            </div>
-        </div>
-    </footer>
-
-    <style>
-
-    </style>
+  <!-- Firebase Config and JavaScript -->
+  <script type="module" src="../assets/js/home.js"></script>
 </body>
-
 </html>
