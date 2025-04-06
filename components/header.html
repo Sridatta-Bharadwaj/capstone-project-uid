@@ -1,0 +1,92 @@
+<header class="main-header">
+  <div class="main-nav">
+    <div class="header-left">
+      <div class="logo">
+        <img src="../assets/images/logo.jpg" alt="Logo" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="../pages/home.html">Home</a></li>
+        <li><a href="../pages/about.html">About</a></li>
+        <li><a href="../pages/blogs.html">Blog</a></li>
+        <li><a href="../pages/events.html">Events</a></li>
+        <li><a href="../pages/research.html">Research</a></li>
+      </ul>
+    </div>
+    <div class="header-right">
+      <img src="../assets/images/default-avatar.png" class="profile-pic" id="profilePic" alt="Profile" />
+    </div>
+  </div>
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    fetch("../components/header.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.body.insertAdjacentHTML("afterbegin", data);
+      })
+      .catch((error) => console.error("Error loading header:", error));
+  });
+</script>
+
+<style>
+/* Header adjustments */
+.main-header {
+  background-color: #0047ab;
+  color: white;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #00c6ff;
+  text-shadow: 0 0 15px #00c6ff, 0 0 25px #00c6ff;
+}
+
+.profile-pic {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  cursor: pointer;
+}
+</style>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amrita College Events</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="../assets/css/events-styles.css">
+</head>
+<body>
+
+
+  <div class="search-filter">
+    <input type="text" id="searchInput" onkeyup="filterEvents()" placeholder="Search for events...">
+  </div>
+
+  <div class="event-container" id="eventContainer">
+    <!-- Events will be dynamically added here -->
+  </div>
+
+  <footer class="footer">
+    <h1>For more details on our blogs</h1>
+    <div class="footer-content">
+      <div class="linkedin-container">
+        <a href="https://in.linkedin.com/in/amrita-vishwa-vidyapeetham-chennai-campus-885674259"><img src="https://tse3.mm.bing.net/th?id=OIP.ozDiSGJlUqI6815cRlJiNAHaHa&pid=Api&P=0&h=180" alt="LinkedIn Logo"></a><br>
+        <br><p>Follow us on LinkedIn</p>
+      </div>
+
+      <div class="qr-container">
+        <a href="https://www.instagram.com/amrita_university/"><img src="https://i.pinimg.com/originals/6a/39/8e/6a398e2bffd61024b7fa8c6eaf6a4e62.png" alt="Instagram QR Code"></a><br>
+        <p>Follow us on Instagram</p>
+      </div>
+
+      <div class="contact-container">
+        <h3>Contact Us</h3><br><br>
+        <p>📍 Amrita Vishwa Vidyapeetham</p>
+        <p>📞 +91 422 268 5000</p>
+        <p>📧 contact@amrita.edu</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const events = [
+      {
+        category: "Cultural",
+        title: "Kalotsavam 2025",
+        date: "April 12–14, 2025",
+        description: "A festival of dance, drama, art, and music where creativity meets tradition.",
+        image: "https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        category: "Technical",
+        title: "Anokha Tech Fest",
+        date: "May 2–4, 2025",
+        description: "Tech talks, coding battles, and innovative projects await future engineers.",
+        image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        category: "Sports",
+        title: "Annual Sports Meet",
+        date: "June 10–12, 2025",
+        description: "Get ready for intense action across football, athletics, cricket, and more!",
+        image: "https://png.pngtree.com/thumb_back/fh260/background/20220217/pngtree-colorful-sports-theme-background-material-image_944423.jpg"
+      },
+      {
+        category: "Academic",
+        title: "Research Symposium",
+        date: "July 15, 2025",
+        description: "Presentations and papers from students and faculty on groundbreaking research.",
+        image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        category: "Workshop",
+        title: "Cybersecurity Workshop",
+        date: "September 18, 2025",
+        description: "Hands-on session covering ethical hacking, digital forensics and more.",
+        image: "https://safety.rsf.org/wp-content/uploads/2023/10/Cyber-security-workshop.png"
+      },
+      {
+        category: "Entrepreneurship",
+        title: "Startup Pitch Day",
+        date: "October 7, 2025",
+        description: "Students pitch startup ideas to industry experts and investors. Innovation on display!",
+        image: "https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,anim=false,background=white,quality=75,width=500,height=500/event-covers/t1/8e4e3b09-5f41-400b-aa42-430ef332c06d"
+      },
+      {
+        category: "tantrotsav event",
+        title: "Various events included",
+        date: "October 7, 2025",
+        description: "Students paricipate in various events !",
+        image: "../images/download.jpg"
+      },
+      {
+        category: "Cultural",
+        title: "Arora 2025",
+        date: "march 12–14, 2025",
+        description: "A festival of bharathanatiyam,classical dance, music, singing.",
+        image: "../images/download(1).jpg"
+      },
+      {
+        category: "Social",
+        title: "Green Campus Drive",
+        date: "November 10, 2025",
+        description: "An initiative to promote environmental awareness and sustainability across campus.",
+        image: "https://images.unsplash.com/photo-1508830524289-0adcbe822b40?auto=format&fit=crop&w=800&q=80"
+      }
+    ];
+  
+    const container = document.getElementById("eventContainer");
+    events.forEach(event => {
+      const card = document.createElement("div");
+      card.className = "event-card";
+      card.style.backgroundImage = `url('${event.image}')`;
+      card.innerHTML = `
+        <div class="event-content">
+          <div class="event-category">${event.category}</div>
+          <div class="event-title">${event.title}</div>
+          <div class="event-date">${event.date}</div>
+          <div class="event-description">${event.description}</div>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  
+    // Scroll-triggered zoom-in animation
+    const cards = document.querySelectorAll(".event-card");
+  
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate__animated", "animate__zoomIn");
+            entry.target.style.animationDelay = `${Math.random() * 0.6}s`;
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1
+      }
+    );
+  
+    cards.forEach(card => {
+      observer.observe(card);
+    });
+  
+    function filterEvents() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const cards = document.querySelectorAll(".event-card");
+  
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(input) ? "flex" : "none";
+      });
+    }
+  </script>
+  <script>
+    const eventContainer = document.getElementById("eventContainer");
+  
+    function renderEvents(eventList) {
+      eventContainer.innerHTML = "";
+      eventList.forEach(event => {
+        const card = document.createElement("div");
+        card.className = "event-card animate__animated animate__fadeInUp";
+        card.style.backgroundImage = `url('${event.image}')`;
+  
+        card.innerHTML = `
+          <div class="event-content">
+            <div class="event-category">${event.category}</div>
+            <div class="event-title">${event.title}</div>
+            <div class="event-date">${event.date}</div>
+            <div class="event-description">${event.description}</div>
+          </div>
+        `;
+  
+        eventContainer.appendChild(card);
+      });
+    }
+  
+    function filterEvents() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const filtered = events.filter(event =>
+        event.title.toLowerCase().includes(query) ||
+        event.category.toLowerCase().includes(query) ||
+        event.description.toLowerCase().includes(query)
+      );
+      renderEvents(filtered);
+    }
+  
+    // Initial render
+    renderEvents(events);
+  </script>
+  
+  
+  
+</body>
+</html>

@@ -1,0 +1,201 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+        background-image: url('../images/image.png') no-repeat center center/cover;    
+        background-attachment: fixed;
+        color: #333;
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: -1;
+    }
+
+    header {
+        text-align: center;
+        padding: 40px 20px 20px;
+        color: #0045b3;
+    }
+
+    header h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+
+    .search-filter {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .search-filter input {
+        padding: 10px;
+        width: 300px;
+        font-size: 1rem;
+        border: 2px solid #0045b3;
+        border-radius: 8px;
+    }
+
+    .event-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        padding: 30px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .event-card {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        min-height: 300px;
+        color: #fff;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease, opacity 0.8s ease;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        opacity: 0;
+        transform: scale(0.95);
+        animation: cardFadeIn 0.8s forwards;
+    }
+
+    /* Hover effect */
+    .event-card:hover {
+        transform: scale(1.05) rotateZ(1deg);
+        box-shadow: 0 15px 30px rgba(18, 7, 7, 0.25);
+        filter: brightness(1.05);
+    }
+
+    /* Keyframes for entry animation */
+    @keyframes cardFadeIn {
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .event-card:hover {
+        transform: scale(1.05) rotateZ(1deg);
+        box-shadow: 0 15px 30px rgba(255, 255, 255, 0.25);
+        filter: brightness(1.05);
+    }
+    .event-content {
+        background: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+    }
+
+    .event-category {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        color: #ffcdd2;
+    }
+
+    .event-title {
+        font-size: 1.5rem;
+        margin: 5px 0;
+        color: #fff;
+    }
+
+    .event-date {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    .event-description {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    .footer {
+        background: #0047ab;
+        color: white;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+
+    .linkedin-container img,
+    .qr-container img {
+        width: 120px;
+        height: 120px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+        transition: transform 0.3s;
+    }
+
+    .linkedin-container img:hover,
+    .qr-container img:hover {
+        transform: scale(1.1);
+    }
+
+    .contact-container h2 {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .contact-container p {
+        font-size: 14px;
+    }
+    .main-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(5px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+      
+      .header-left h1 {
+        color: #0045b3;
+        font-size: 2.2rem;
+        margin-bottom: 5px;
+      }
+      
+      .header-left p {
+        font-size: 1rem;
+        color: #444;
+      }
+      
+      .header-right {
+        display: flex;
+        align-items: center;
+      }
+      
+      .header-profile-pic {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        object-fit: cover;
+        cursor: pointer;
+        border: 2px solid #0047ab;
+        transition: transform 0.3s;
+      }
+      
+      .header-profile-pic:hover {
+        transform: scale(1.1);
+      }
+      
