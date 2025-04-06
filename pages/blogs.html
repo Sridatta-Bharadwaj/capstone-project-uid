@@ -1,87 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amrita Blog</title>
-    <link rel="stylesheet" href="../assets/css/blogs-style.css">
-    <script>
-        function navigateToPage(page) {
-            window.location.href = page;
-        }
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blogs by Category</title>
+  <link rel="stylesheet" href="../assets/css/blogs-style.css" />
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <header>
-        <div class="logo">
-            <img src="../assets/images/logo.jpg" alt="Amrita Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="blogs.html">Blog</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Research</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <div class="logo">
+      <img src="../assets/images/logo.jpg" alt="Amrita Logo" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../pages/home.html">Home</a></li>
+        <li><a href="../pages/about.html">About</a></li>
+        <li><a href="../pages/blogs.html">Blog</a></li>
+        <li><a href="../pages/events.html">Events</a></li>
+        <li><a href="../pages/research.html">Research</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Top Blog Posts Section -->
-    <section class="top-posts">
-        <h2>Blog Showcase</h2>
-        <div class="post" onclick="navigateToPage('health.html')">
-            <h3>Health Blog</h3>
-            <p>Discover the best tips for maintaining a healthy lifestyle.</p>
-        </div>
-        <div class="post" onclick="navigateToPage('technology.html')">
-            <h3>Technology</h3>
-            <p>How artificial intelligence is transforming learning.</p>
-        </div>
-        <div class="post" onclick="navigateToPage('food.html')">
-            <h3>Food Blog</h3>
-            <p>Try out these amazing recipes from around the world.</p>
-        </div>
-    </section>
+  <div class="filter-bar">
+    <input type="text" id="searchInput" placeholder="Search by title, category, or username">
+    <button onclick="searchBlogs()">Search</button>
+    <button id="createBlogBtn">+ Create Blog</button>
+  </div>
 
-    <!-- Search Section -->
-    <section class="search-container">
-        <input type="text" placeholder="Search for blogs...">
-        <button>Search</button>
-    </section>
+  <div id="blogContainer" class="blog-list"></div>
 
-    <!-- Create Blog Button -->
-    <section class="create-blog">
-        <button onclick="location.href='create-blog.html'">+</button>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <h1>For more details on our blogs</h1>
-        <div class="footer-content">
-            <!-- LinkedIn Section -->
-            <div class="linkedin-container">
-                <img src="../assets/images/linkedin.png" alt="LinkedIn Logo">
-                <p>Follow us on LinkedIn</p>
-            </div>
-
-            <!-- QR Code Section -->
-            <div class="qr-container">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.instagram.com/amrita_university/" alt="Instagram QR Code">
-                <p>Scan the QR code to visit our Instagram page</p>
-            </div>
-
-            <!-- Contact Info Section -->
-            <div class="contact-container">
-                <h3>Contact Us</h3>
-                <p>📍 Amrita Vishwa Vidyapeetham</p>
-                <p>📞 +91 422 268 5000</p>
-                <p>📧 contact@amrita.edu</p>
-            </div>
-        </div>
-    </footer>
-
+  <script type="module" src="../assets/js/blogs.js"></script>
+  <script>
+    document.getElementById("createBlogBtn").addEventListener("click", () => {
+      window.location.href = "../pages/create-blog.html"; // Update this path if your file is elsewhere
+    });
+  </script>
 </body>
 </html>
