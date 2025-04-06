@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amrita Blog</title>
+    <link rel="stylesheet" href="../assets/css/research-style.css">
+    <script>
+        function navigateToPage(page) {
+            window.location.href = page;
+        }
+
+        function filterCategory(category, event) {
+  const items = document.querySelectorAll(".research-item");
+  const buttons = document.querySelectorAll(".filters button");
+
+  buttons.forEach(btn => btn.classList.remove("active"));
+  if (event) event.target.classList.add("active");
+
+  items.forEach(item => {
+    const itemCategory = item.getAttribute("data-category");
+    const title = item.querySelector("h3").innerText.toLowerCase();
+    const desc = item.querySelector("p").innerText.toLowerCase();
+    const searchValue = document.getElementById("searchInput").value.toLowerCase();
+
+    const matchesCategory = (category === "All" || itemCategory === category);
+    const matchesSearch = title.includes(searchValue) || desc.includes(searchValue);
+
+    item.style.display = matchesCategory && matchesSearch ? "" : "none";
+  });
+}
+
+function filterResearch() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const activeButton = document.querySelector(".filters button.active");
+  const activeCategory = activeButton ? activeButton.textContent : "All";
+  filterCategory(activeCategory, null);
+}
+
+    </script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <img src="../assets/images/logo.jpg" alt="Amrita Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="blogs.html">Blog</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="research.html">Research</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+
+ 
+
+    <!-- Research Section -->
+
+  <h1>University Research Blog</h1>
+
+  <div class="search-bar">
+    <div class="search-wrapper">
+      <input type="text" id="searchInput" placeholder="Search research articles..." onkeyup="filterResearch()">
+      <button type="submit"><i class="fas fa-search"></i></button>
+    </div>
+  </div>
+
+  <section class="featured-research">
+    <h2><span class="star">🌟</span> Featured Research: <span class="title-highlight">AI in Education</span></h2>
+    <p><strong>By Dr. Sharma</strong> &nbsp;|&nbsp; <span class="badge cs">Computer Science</span></p>
+    <p class="description">
+      Exploring how artificial intelligence can personalize learning experiences for students, tailoring content and pace to individual needs.
+    </p>
+    <p class="meta">
+      <span>📅 March 2024</span> &nbsp;•&nbsp; <span>⏱️ 5 min read</span>
+    </p>
+    <a href="#" class="read-more">🔗 Read Full Article</a>
+  </section>
+  
+
+  <div class="filters">
+    <strong>Filter by Category:</strong>
+    <button onclick="filterCategory('All', event)" class="active">All</button>
+    <button onclick="filterCategory('Computer Science', event)">Computer Science</button>
+    <button onclick="filterCategory('Biotech', event)">Biotech</button>
+    <button onclick="filterCategory('Physics', event)">Physics</button>
+    <button onclick="filterCategory('Mathematics', event)">Mathematics</button>
+  </div>
+  
+
+  <div class="research-list" id="researchList">
+
+    <div class="research-item" data-category="Computer Science">
+      <img src="../assets/images/qc.jpg" alt="Quantum" class="research-img" />
+      <h3>Quantum Computing Advances</h3>
+      <p>By Dr. adhi <span class="badge cs">Computer Science</span></p>
+      <p>A dive into the recent breakthroughs in quantum computing algorithms.</p>
+      <p class="meta">📅 Feb 2024 • ⏱️ 6 min read</p>
+      <a href="#" class="read-more">Read More</a>
+    </div>
+
+    <div class="research-item" data-category="Biotech">
+      <img src="../assets/images/p.jpg" alt="Plants" class="research-img" />
+      <h3>Discovery of New Plant Species</h3>
+      <p>By Dr. Mehta <span class="badge bio">Biotech</span></p>
+      <p>Research on newly discovered species with potential medicinal properties.</p>
+      <p class="meta">📅 Jan 2024 • ⏱️ 4 min read</p>
+      <a href="#" class="read-more">Read More</a>
+    </div>
+
+    <div class="research-item" data-category="Physics">
+      <img src="../assets/images/d.jpg" alt="Dark Matter" class="research-img" />
+      <h3>Dark Matter Detection Techniques</h3>
+      <p>By Dr. Singh <span class="badge phy">Physics</span></p>
+      <p>Innovative methods used in the detection and study of dark matter particles.</p>
+      <p class="meta">📅 March 2023 • ⏱️ 7 min read</p>
+      <a href="#" class="read-more">Read More</a>
+    </div>
+
+    <div class="research-item" data-category="Mathematics">
+      <img src="../assets/images/mm.jpg" alt="Math Logic" class="research-img" />
+      <h3>Mathematical Modeling in Epidemiology</h3>
+      <p>By Dr. Roy <span class="badge math">Mathematics</span></p>
+      <p>Using math models to predict disease spread and healthcare responses.</p>
+      <p class="meta">📅 Nov 2023 • ⏱️ 5 min read</p>
+      <a href="#" class="read-more">Read More</a>
+    </div>
+
+    <div class="research-item" data-category="Environment">
+      <img src="../assets/images/gg.jpg" alt="Green Tech" class="research-img" />
+      <h3>Green Computing & Sustainable Tech</h3>
+      <p>By Dr. Emily Green <span class="badge env">Environment</span></p>
+      <p>Reducing carbon footprint with sustainable and energy-efficient design.</p>
+      <p class="meta">📅 Feb 2024 • ⏱️ 4 min read</p>
+      <a href="#" class="read-more">Read More</a>
+    </div>
+  
+    <div class="research-item" data-category="Neuroscience">
+      <img src="../assets/images/bci.jpg" alt="Brain Interface" class="research-img" />
+      <h3>Brain-Computer Interfaces (BCI)</h3>
+      <p>By Dr. Nisha Neuro <span class="badge neuro">Neuroscience</span></p>
+      <p>Connecting minds with machines for futuristic control and feedback.</p>
+      <p class="meta">📅 Jan 2024 • ⏱️ 7 min read</p>
+      <a href="#" class="read-more">Read More</a>
+    </div>
+  
+    <div class="research-item" data-category="Education">
+      <img src="../assets/images/ar-edu.jpg" alt="AR in Education" class="research-img" />
+      <h3>Augmented Reality in Education</h3>
+      <p>By Dr. Leena Vision <span class="badge edu">Education</span></p>
+      <p>Enhancing student learning through immersive AR tools and simulations.</p>
+      <p class="meta">📅 Dec 2023 • ⏱️ 5 min read</p>
+      <a href="#" class="read-more">Read More</a>
+    </div>
+  
+    <div class="research-item" data-category="Security">
+      <img src="../assets/images/cyber-ai.jpg" alt="AI Security" class="research-img" />
+      <h3>Cybersecurity & AI in Threat Detection</h3>
+      <p>By Dr. Omar Shield <span class="badge sec">Security</span></p>
+      <p>Using intelligent systems to detect and neutralize cyber threats in real time.</p>
+      <p class="meta">📅 Nov 2023 • ⏱️ 6 min read</p>
+      <a href="#" class="read-more">Read More</a>
+    </div>
+
+  </div>
+
+  <script>
+    function filterResearch() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const items = document.querySelectorAll(".research-item");
+
+      items.forEach(item => {
+        const title = item.querySelector("h3").innerText.toLowerCase();
+        const desc = item.querySelector("p").innerText.toLowerCase();
+        if (title.includes(input) || desc.includes(input)) {
+          item.style.display = "";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    }
+
+    function filterCategory(category) {
+      const items = document.querySelectorAll(".research-item");
+      const buttons = document.querySelectorAll(".filters button");
+
+      buttons.forEach(btn => btn.classList.remove("active"));
+      event.target.classList.add("active");
+
+      items.forEach(item => {
+        if (category === "All" || item.getAttribute("data-category") === category) {
+          item.style.display = "";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    }
+  </script>
+
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer">
+        <h2>For more details on our blogs</h2>
+        <div class="footer-content">
+          <div class="linkedin-container">
+            <a href="https://in.linkedin.com/in/amrita-vishwa-vidyapeetham-chennai-campus-885674259"><img src="https://tse3.mm.bing.net/th?id=OIP.ozDiSGJlUqI6815cRlJiNAHaHa&pid=Api&P=0&h=180" alt="LinkedIn Logo"></a><br>
+            <p>Follow us on LinkedIn</p>
+          </div>
+      
+          <div class="qr-container">
+            <a href="https://www.instagram.com/amrita_university/"><img src="https://i.pinimg.com/originals/6a/39/8e/6a398e2bffd61024b7fa8c6eaf6a4e62.png" alt="Instagram QR Code"></a><br>
+            <p>Follow us on Instagram</p>
+          </div>
+      
+          <div class="contact-container">
+            <h2>Contact Us</h2>
+            <p>📍 Amrita Vishwa Vidyapeetham<br>
+               📞 +91 422 268 5000<br>
+               📧 contact@amrita.edu</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    
+
+</body>
+</html>

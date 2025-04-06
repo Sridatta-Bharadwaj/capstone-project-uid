@@ -1,79 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Amrita</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Amrita Blog</title>
+  <link rel="stylesheet" href="../assets/css/about-styles.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">About</div>
-            <ul class="nav-links">
-                <li><a href="#mission">Mission</a></li>
-                <li><a href="#vision">Vision</a></li>
-                <li><a href="#values">Values</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="hero">
-            <h1>ABOUT</h1>
-            <p>Fostering Excellence in Education and Research</p>
+  <!-- Navigation Bar -->
+  <header class="main-header">
+    <div class="main-nav">
+      <div class="header-left">
+        <div class="logo">
+          <img src="../assets/images/logo.jpg" alt="Logo" />
         </div>
-    </header>
-    
-    <section id="mission" class="content-section">
-        <h2>Our Mission</h2>
-        <p>We aim to provide world-class education, research, and community service with a strong emphasis on innovation and leadership.</p>
-    </section>
-    
-    <section id="vision" class="content-section">
-        <h2>Our Vision</h2>
-        <p>To be recognized globally for academic excellence and research-driven contributions to society.</p>
-    </section>
-    
-    <section id="values" class="content-section">
-        <h2>Our Core Values</h2>
-        <ul>
-            <li>Innovation & Excellence</li>
-            <li>Integrity & Ethics</li>
-            <li>Collaboration & Inclusion</li>
-            <li>Sustainability & Social Responsibility</li>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="blogs.html">Blog</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="research.html">Research</a></li>
         </ul>
-    </section>
-    
-    <section id="contact" class="content-section">
-        <h2>Contact Us</h2>
-        <p>Email: contact@amrita.edu | Phone: +91 12345 67890</p>
-    </section>
-    
-     <!-- Footer with QR Code, LinkedIn, and Contact Info -->
-    <footer class="footer">
-        <h1>For more details on our blogs</h1>
-        <div class="footer-content">
-            <!-- LinkedIn Section -->
-            <div class="linkedin-container">
-                <a href="https://in.linkedin.com/in/amrita-vishwa-vidyapeetham-chennai-campus-885674259"><img src="../assets/images/linkedin-logo.jpg" alt="LinkedIn Logo"></a><br>
-                <br><p>Follow us on LinkedIn</p>
-            </div>
+      </div>
+      <div class="header-right">
+        <img src="../assets/images/profile-pic.png" class="profile-pic" id="profilePic" />
+      </div>
+    </div>
+  </header>
+  
 
-            <!-- QR Code Section -->
-            <div class="qr-container">
-                <a href="https://www.instagram.com/amrita_university/"><img src="../assets/images/instagram-logo.png" alt="Instagram QR Code"></a><br>
-                <p>Follow us on Instagram</p>
-            </div>
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="hero-content">
+      <h1>About Amrita Weblog</h1>
+      <p>Learn more about our mission, team, and goals.</p>
+    </div>
+  </section>
 
-            <!-- Contact Info Section -->
-            <div class="contact-container">
-                <h3>Contact Us</h3><br><br>
-                <p>📍 Amrita Vishwa Vidyapeetham</p>
-                <p>📞 +91 422 268 5000</p>
-                <p>📧 contact@amrita.edu</p>
-            </div>
-        </div>
-    </footer>
+  <section class="blog-container">
+    <div class="blog-card">
+      <div class="blog-content">
+        <h3>Our Mission</h3>
+        <p>Amrita Weblog is a platform to share research, innovations, campus life, and achievements from students and faculty at Amrita Vishwa Vidyapeetham.</p>
+      </div>
+    </div>
+    <div class="blog-card">
+      <div class="blog-content">
+        <h3>Our Team</h3>
+        <p>This blog is maintained by the Department of Computer Science in collaboration with student developers and contributors across all campuses.</p>
+      </div>
+    </div>
+    <div class="blog-card">
+      <div class="blog-content">
+        <h3>Get Involved</h3>
+        <p>If you're a student, faculty member, or alumni with a story or innovation to share, reach out and become part of our blogging family!</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- Footer -->
+  <footer class="footer">
+    <h1>For more details on our blogs</h1>
+    <div class="footer-content">
+      <div class="linkedin-container">
+        <img src="../assets/images/linkedin-logo.png" alt="LinkedIn Logo" /><br />
+        <p>Follow us on LinkedIn</p>
+      </div>
+      <div class="qr-container">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.instagram.com/amrita_university/" alt="Instagram QR Code" /><br />
+        <p>Scan the QR code to visit our Instagram page</p>
+      </div>
+      <div class="contact-container">
+        <h3>Contact Us</h3>
+        <p>📍 Amrita Vishwa Vidyapeetham</p>
+        <p>📞 +91 422 268 5000</p>
+        <p>📧 contact@amrita.edu</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="../assets/js/about.js"></script>
 </body>
 </html>
